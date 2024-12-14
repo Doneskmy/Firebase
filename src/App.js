@@ -1,4 +1,3 @@
-/* eslint-disable */
 import './App.css';
 import Comentarios from './componentes/Aplicacao'; 
 
