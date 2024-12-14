@@ -22,6 +22,26 @@ function cortina (){
     }
 }
 
+function leitura () {
+    
+    get(ref(database, 'Ong Amigos do Campo')).then((snapshot) => {
+       if (snapshot) {
+           console.log(snapshot.val())
+           const intermedio = snapshot.val();
+           setDados(intermedio);
+
+       }
+       else {
+           console.log('kd?');
+       }
+
+   }).catch((error) => {
+       console.error(error)
+       console.log('frito')
+   });
+}
+
+
 function escrever (assunto) {
     const key = uuidv4();
     set(ref(database, 'Ong Amigos do Campo/'+ key), {
@@ -43,34 +63,15 @@ function sobreescrever (chave, assunto) {
         }
 }
 
-function leitura () {
-    
-     get(ref(database, 'Ong Amigos do Campo')).then((snapshot) => {
-        if (snapshot) {
-            console.log(snapshot.val())
-            const intermedio = snapshot.val();
-            setDados(intermedio);
-
-        }
-        else {
-            console.log('kd?');
-        }
-
-    }).catch((error) => {
-        console.error(error)
-        console.log('frito')
-    });
-}
-
-    const atualizar = (e) => {
-        setAssunto(e.target.value);
-    };
-
 function apagar (descarte) {
     const destruir = ref(database, 'Ong Amigos do Campo/' + descarte)
     remove(destruir)
     leitura();
 }
+
+const atualizar = (e) => {
+    setAssunto(e.target.value);
+};
 
     return (
         <div>
