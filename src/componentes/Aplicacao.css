@@ -1,0 +1,51 @@
+.paraInput {
+    width: 200px;
+    padding: 14px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+    font-size: larger;
+    border-color: black;
+}
+
+.botao {
+    width: 150px;
+    padding: 12px;
+    border-color: black;
+}
+
+.controle {
+    
+    flex-direction: column;
+    text-align: center;
+}
+
+.alinhando {
+    text-align: center; 
+}
+
+
+.botun {
+    border-color: black;
+    border-radius: 10px;
+    padding: 6px;
+    margin-left: 10px;
+    width: 70px;
+    margin-top: 20px;
+    background-color: #FFB6C1;
+}
+
+.alinhandoItens {
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+   flex-direction: column;
+   overflow-y: auto;
+   max-height: 250px;
+   overflow-x: auto;
+   max-width: 99vh;
+}
+
+li {
+    text-align: start;
+}
+
