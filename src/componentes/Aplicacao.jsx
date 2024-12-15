@@ -32,12 +32,12 @@ function leitura () {
 
        }
        else {
-           console.log('kd?');
+           console.log('Não encontrado');
        }
 
    }).catch((error) => {
        console.error(error)
-       console.log('frito')
+       console.log('Erro')
    });
 }
 
